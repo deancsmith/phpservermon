@@ -187,6 +187,9 @@ Vagrant.configure('2') do |config|
       end
     end
   end
+  
+  # Dont have Vagrant try to replace the username with a more secure SSH key
+  config.ssh.insert_key = false
 
   ssh_username = !data['ssh']['username'].nil? ? data['ssh']['username'] : 'vagrant'
 
